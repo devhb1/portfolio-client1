@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import BrandLogo from '@/components/BrandLogo'
 
 const services = [
@@ -122,11 +121,7 @@ export default function Home() {
             </header>
 
             <section className="relative overflow-hidden bg-[#1f1f22] text-white">
-                <div className="absolute inset-0 opacity-15">
-                    <Image src="/assets/shot-01.png" alt="background" fill className="object-cover" priority />
-                </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/45 to-black/20" />
-                <div className="absolute -top-20 -right-20 h-56 w-56 rounded-full bg-[#e31a1c]/20 blur-3xl" />
 
                 <div className="section-container relative z-10 py-14 md:py-20 grid lg:grid-cols-[1.2fr_0.8fr] gap-10 items-center">
                     <div>
@@ -190,16 +185,31 @@ export default function Home() {
                             <p><span className="text-[#ff5f61] font-bold">Fast Turnaround</span> with quality control</p>
                             <p><span className="text-[#ff5f61] font-bold">Freelance / Retainer</span> availability</p>
                         </div>
-                        <div className="mt-5 relative h-40 overflow-hidden border border-white/15">
-                            <Image src="/assets/shot-02.png" alt="Kartik profile" fill className="object-cover" />
+                        <div className="mt-5 border border-white/15 p-4 bg-black/20">
+                            <p className="text-xs uppercase tracking-[0.2em] text-white/65">Primary Focus</p>
+                            <p className="mt-2 text-sm text-white/90 leading-relaxed">
+                                Premium visuals for creators and brands: thumbnails, edits, identity systems,
+                                and launch-ready design assets.
+                            </p>
                         </div>
                     </motion.aside>
                 </div>
             </section>
 
             <section className="section-container py-14 md:py-20 grid md:grid-cols-[1fr_1.4fr] gap-8 items-start">
-                <div className={`relative rounded-sm overflow-hidden border ${darkMode ? 'border-white/15 bg-white/5' : 'border-black/10 bg-white'}`}>
-                    <Image src="/assets/shot-02.png" alt="Kartik Sihag" width={900} height={900} className="w-full h-auto" />
+                <div className={`rounded-sm border p-6 md:p-8 ${darkMode ? 'border-white/15 bg-white/5' : 'border-black/10 bg-white'}`}>
+                    <p className={`text-xs uppercase tracking-[0.22em] font-semibold ${mutedText}`}>Profile</p>
+                    <h3 className="mt-3 text-2xl md:text-3xl font-black leading-tight">
+                        Kartik Sihag
+                    </h3>
+                    <p className={`mt-3 text-sm md:text-base leading-relaxed ${darkMode ? 'text-white/80' : 'text-black/80'}`}>
+                        Editor & designer focused on building clean, high-performing visual systems for digital brands.
+                    </p>
+                    <div className="mt-5 space-y-2 text-sm md:text-base">
+                        <p><span className="font-bold">Experience:</span> 6+ years</p>
+                        <p><span className="font-bold">Speciality:</span> Content-first brand visuals</p>
+                        <p><span className="font-bold">Mode:</span> Freelance / Retainer</p>
+                    </div>
                 </div>
                 <div>
                     <p className={`text-xs uppercase tracking-[0.22em] font-semibold ${mutedText}`}>About</p>
@@ -256,8 +266,13 @@ export default function Home() {
                             viewport={{ once: true }}
                             className={`${cardBg} overflow-hidden group transition-colors duration-300`}
                         >
-                            <div className="relative h-60 overflow-hidden">
-                                <Image src={project.image} alt={project.title} fill className="object-cover group-hover:scale-[1.03] transition duration-500" />
+                            <div className={`p-5 md:p-6 border-b ${darkMode ? 'border-white/10 bg-white/5' : 'border-black/10 bg-[#faf9f3]'}`}>
+                                <p className={`text-xs uppercase tracking-[0.2em] ${darkMode ? 'text-white/55' : 'text-black/55'}`}>
+                                    Visual Reference Removed
+                                </p>
+                                <p className={`mt-2 text-sm ${darkMode ? 'text-white/70' : 'text-black/70'} break-all`}>
+                                    Original asset: {project.image}
+                                </p>
                             </div>
                             <div className={`p-5 md:p-6 ${darkMode ? 'group-hover:bg-white/10' : 'group-hover:bg-[#faf9f3]'} transition`}>
                                 <p className={`text-xs uppercase tracking-[0.2em] ${darkMode ? 'text-white/55' : 'text-black/55'}`}>{project.category}</p>

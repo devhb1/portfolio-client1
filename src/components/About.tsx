@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 
 export default function About() {
     const containerVariants = {
@@ -33,16 +32,19 @@ export default function About() {
             viewport={{ once: true, margin: '-100px' }}
         >
             <div className="section-container grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                {/* Image */}
                 <motion.div variants={itemVariants} className="order-2 md:order-1">
-                    <div className="relative w-full bg-[#252528] p-3 overflow-hidden">
-                        <Image
-                            src="/assets/shot-02.png"
-                            alt="Kartik Sihag"
-                            width={500}
-                            height={600}
-                            className="w-full h-auto object-cover"
-                        />
+                    <div className="w-full bg-[#252528] p-6 md:p-8 text-white">
+                        <p className="text-xs uppercase tracking-[0.24em] text-white/70">Profile</p>
+                        <h3 className="mt-3 text-2xl md:text-3xl font-black leading-tight">Kartik Sihag</h3>
+                        <p className="mt-3 text-sm md:text-base text-white/85 leading-relaxed">
+                            Editor and designer creating sharp, audience-focused visuals that help content and brands
+                            perform better across digital platforms.
+                        </p>
+                        <div className="mt-5 space-y-2 text-sm md:text-base">
+                            <p><span className="font-bold">Experience:</span> 6+ years</p>
+                            <p><span className="font-bold">Focus:</span> Creator brands and premium visual systems</p>
+                            <p><span className="font-bold">Engagement:</span> Freelance and retainers</p>
+                        </div>
                     </div>
                 </motion.div>
 

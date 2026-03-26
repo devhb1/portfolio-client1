@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 
 interface HeroProps {
     onViewWork: () => void
@@ -30,16 +29,6 @@ export default function Hero({ onViewWork }: HeroProps) {
 
     return (
         <section className="relative min-h-screen w-full overflow-hidden bg-[#1f1f22] flex items-center justify-center">
-            {/* Background image with overlay */}
-            <div className="absolute inset-0 opacity-40">
-                <Image
-                    src="/assets/shot-01.png"
-                    alt="Hero background"
-                    fill
-                    className="object-cover"
-                    priority
-                />
-            </div>
             <div className="absolute inset-0 bg-gradient-to-r from-[rgba(8,31,67,0.72)] to-[rgba(0,21,67,0.76)]" />
 
             {/* Content */}
@@ -88,6 +77,18 @@ export default function Hero({ onViewWork }: HeroProps) {
                     >
                         Open PDF
                     </a>
+                </motion.div>
+
+                <motion.div
+                    variants={itemVariants}
+                    className="mt-8 mx-auto max-w-2xl border border-white/25 bg-black/20 p-4 text-left"
+                >
+                    <p className="text-xs uppercase tracking-[0.2em] text-white/70">Highlights</p>
+                    <ul className="mt-3 space-y-2 text-sm sm:text-base text-white/90">
+                        <li>• 6+ years in visual design and content editing</li>
+                        <li>• High-conversion thumbnail and social creative systems</li>
+                        <li>• Brand-first visual direction with fast turnaround</li>
+                    </ul>
                 </motion.div>
             </motion.div>
         </section>

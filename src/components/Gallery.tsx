@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 
 interface GalleryProps {
     images: string[]
@@ -66,15 +65,17 @@ export default function Gallery({ images, cols = 2, title, subtitle }: GalleryPr
                             <motion.div
                                 whileHover={{ scale: 1.03 }}
                                 transition={{ duration: 0.4 }}
-                                className="w-full h-auto"
+                                className="w-full p-5 md:p-6"
                             >
-                                <Image
-                                    src={image}
-                                    alt={`Gallery item ${idx + 1}`}
-                                    width={500}
-                                    height={500}
-                                    className="w-full h-auto object-cover"
-                                />
+                                <p className="text-xs uppercase tracking-[0.2em] text-black/55">Project {idx + 1}</p>
+                                <h5 className="mt-2 text-xl md:text-2xl font-extrabold text-[#1f1f22]">Creative Showcase</h5>
+                                <p className="mt-3 text-sm md:text-base leading-relaxed text-black/75">
+                                    This section is now content-first to keep the page clean and avoid irregular
+                                    background/image rendering issues.
+                                </p>
+                                <p className="mt-4 text-xs uppercase tracking-[0.16em] text-[#e31a1c] font-semibold break-all">
+                                    Asset Reference: {image}
+                                </p>
                             </motion.div>
                         </motion.div>
                     ))}
