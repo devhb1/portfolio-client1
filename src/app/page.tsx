@@ -167,7 +167,7 @@ export default function Home() {
                                 Explore Work
                             </a>
                             <a
-                                href="/Kartik Sihag Portfolio (1).pdf"
+                                href="/Kartik%20Sihag%20Portfolio%20.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="px-6 py-3 border border-white font-bold hover:bg-white hover:text-black transition"
