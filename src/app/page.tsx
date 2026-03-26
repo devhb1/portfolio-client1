@@ -290,14 +290,6 @@ export default function Home() {
                             viewport={{ once: true }}
                             className={`${cardBg} overflow-hidden group transition-colors duration-300`}
                         >
-                            <div className={`p-5 md:p-6 border-b ${darkMode ? 'border-white/10 bg-white/5' : 'border-black/10 bg-[#faf9f3]'}`}>
-                                <p className={`text-xs uppercase tracking-[0.2em] ${darkMode ? 'text-white/55' : 'text-black/55'}`}>
-                                    Visual Reference Removed
-                                </p>
-                                <p className={`mt-2 text-sm ${darkMode ? 'text-white/70' : 'text-black/70'} break-all`}>
-                                    Original asset: {project.image}
-                                </p>
-                            </div>
                             <div className={`p-5 md:p-6 ${darkMode ? 'group-hover:bg-white/10' : 'group-hover:bg-[#faf9f3]'} transition`}>
                                 <p className={`text-xs uppercase tracking-[0.2em] ${darkMode ? 'text-white/55' : 'text-black/55'}`}>{project.category}</p>
                                 <h4 className="text-2xl font-extrabold mt-2">{project.title}</h4>
