@@ -1,0 +1,8 @@
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" rx="32" fill="#EDEDE8"/>
+  <g transform="translate(180,120)">
+    <path d="M80 0H170V126L278 0H390L253 142L390 300H278L170 173V300H80V0Z" fill="#B8092B"/>
+  </g>
+  <text x="400" y="535" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="90" font-weight="800" letter-spacing="4" fill="#1A1C21">KARTIK SIHAG</text>
+  <text x="400" y="610" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="48" font-weight="600" letter-spacing="16" fill="#5A5D63">STUDIO</text>
+</svg>
