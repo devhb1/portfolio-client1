@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import BrandLogo from '@/components/BrandLogo'
 
 const services = [
     {
@@ -104,7 +103,11 @@ export default function Home() {
         <main className={`${baseBg} transition-colors duration-300`}>
             <header className={`sticky top-0 z-40 border-b backdrop-blur transition-colors duration-300 ${headerBg}`}>
                 <div className="mx-auto w-[92%] max-w-4xl py-2.5 md:py-3 flex items-center justify-between gap-3 md:gap-5">
-                    <BrandLogo dark={!darkMode} header />
+                    <img
+                        src="/assets/1774529589677.jpg.jpeg"
+                        alt="Kartik Sihag"
+                        className="h-12 w-12 md:h-14 md:w-14 rounded-md object-cover border border-black/10"
+                    />
                     <nav className="hidden md:flex items-center gap-5 text-sm font-semibold">
                         <a href="#services" className="hover:text-[#e31a1c] transition">Services</a>
                         <a href="#work" className="hover:text-[#e31a1c] transition">Work</a>
@@ -149,7 +152,11 @@ export default function Home() {
 
                 <div className="section-container relative z-10 py-14 md:py-20 grid lg:grid-cols-[1.2fr_0.8fr] gap-10 items-center">
                     <div>
-                        <BrandLogo />
+                        <img
+                            src="/assets/1774529589677.jpg.jpeg"
+                            alt="Kartik Sihag"
+                            className="h-24 w-24 md:h-28 md:w-28 rounded-md object-cover border border-white/25"
+                        />
                         <motion.p
                             initial={{ opacity: 0, y: 12 }}
                             animate={{ opacity: 1, y: 0 }}
